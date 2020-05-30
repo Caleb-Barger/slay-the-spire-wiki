@@ -1,6 +1,5 @@
 import React from 'react'
-import { Grid, makeStyles, Typography, Divider, withTheme } from '@material-ui/core'
-import MCard from './MCard'
+import { Grid, makeStyles, Typography, Divider, List, ListItem, ListItemText } from '@material-ui/core'
 
 const useStyles = makeStyles({
     content: {
@@ -11,7 +10,8 @@ const useStyles = makeStyles({
     nameOfClassHeader: {
         marginTop: "15px",
         marginLeft: "40px",
-        color: "white"
+        color: "white",
+        marginBottom: "3px"
     },
     divider: {
         border: "1px solid #BDBDBD"
@@ -37,7 +37,16 @@ const useStyles = makeStyles({
         marginTop: "10px",
         marginLeft: "40px",
         color: "white",
-        marginTop: "32px"
+        marginTop: "32px",
+        marginBottom: "3px"
+    },
+    startingCards: {
+        marginTop: "20px"
+    },
+    startingCardItem: {
+        color: "white",
+        padding: "4px 3%",
+        fontSize: "1.2rem"
     }
 })
 
@@ -72,12 +81,31 @@ const Content = () => {
                     </Grid>
                     <Grid item container xs={12} justify="center" className={classes.characterInfo3}>
                         <Typography variant="body1" className={classes.bodyText}>
-                            The Ironclad's starting Relic is BurningBlood Burning Blood, which heals 6 HP after combat. 
+                            The Ironclad's starting Relic is Burning Blood, which heals 6 HP after combat. 
                         </Typography>
                     </Grid>
                     <Grid item xs={12}>
                         <Typography variant="h4" className={classes.startingDeckInfoHeader}>
                             Starting Deck
+                        </Typography>
+                        <Divider variant="middle" className={classes.divider}/>
+                    </Grid>
+                    <Grid item xs={12} >
+                        <List dense component="ul" className={classes.startingCards}>
+                            <ListItem className={classes.startingCardItem}>
+                                    5 Strike
+                            </ListItem>
+                            <ListItem className={classes.startingCardItem}>
+                                    4 Defend
+                            </ListItem>
+                            <ListItem className={classes.startingCardItem}>
+                                    1 Bash
+                            </ListItem>
+                        </List>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Typography variant="h4" className={classes.startingDeckInfoHeader}>
+                            Character Unlocks
                         </Typography>
                         <Divider variant="middle" className={classes.divider}/>
                     </Grid>
