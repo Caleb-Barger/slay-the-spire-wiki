@@ -22,7 +22,7 @@ const Header = () => {
     const classes = useStyles()
 
     return (
-        <AppBar position="static" className={classes.appBarBackground}>
+        <AppBar position="sticky" className={classes.appBarBackground}>
             <Toolbar>
                 <Grid container>
                     <Grid item xs={false} lg={1}/>
