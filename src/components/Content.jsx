@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, makeStyles, Typography, Divider, List, ListItem } from '@material-ui/core'
 import DenseTable from './Dense'
+import {connect} from 'react-redux'
  
 const useStyles = makeStyles({
     content: {
@@ -51,9 +52,7 @@ const useStyles = makeStyles({
     }
 })
 
-const source = "https://vignette.wikia.nocookie.net/slay-the-spire/images/7/70/Ironclad.png/revision/latest/"
-
-const Content = () => {
+const Content = props => {
 
     const classes = useStyles()
 
@@ -63,26 +62,26 @@ const Content = () => {
             <Grid item container xs={12} md={8} className={classes.content}>
                     <Grid item xs={12}>
                         <Typography variant="h4" className={classes.nameOfClassHeader}>
-                            Ironclad
+                            {props.character.name}
                         </Typography>
                         <Divider variant="middle" className={classes.divider}/>
                     </Grid>
                     <Grid item container xs={12} justify="center">
-                        <img src={source} alt="Character"/>
+                        <img src={props.character.imageSrc} alt="Character"/>
                     </Grid>
                     <Grid item container xs={12} justify="center" className={classes.characterInfo1}>
                         <Typography variant="body1" className={classes.bodyText}>
-                            "The remaining soldier of the Ironclads. Sold his soul to harness demonic energies."
+                            {props.character.desc1}
                         </Typography>
                     </Grid>
                     <Grid item container xs={12} justify="center" className={classes.characterInfo2}>
                         <Typography variant="body1" className={classes.bodyText}>
-                            The Ironclad is one of four playable characters in Slay the Spire. He wields an arsenal of powerful strikes, boasts formidable defensive options, and can draw fiendish power from his demonic benefactors. He starts with 80 hp, highest of the playable characters. 
+                            {props.character.desc2}
                         </Typography>
                     </Grid>
                     <Grid item container xs={12} justify="center" className={classes.characterInfo3}>
                         <Typography variant="body1" className={classes.bodyText}>
-                            The Ironclad's starting Relic is Burning Blood, which heals 6 HP after combat. 
+                            {props.character.desc3}
                         </Typography>
                     </Grid>
                     <Grid item xs={12}>
@@ -93,15 +92,13 @@ const Content = () => {
                     </Grid>
                     <Grid item xs={12} >
                         <List dense component="ul" className={classes.startingCards}>
-                            <ListItem className={classes.startingCardItem}>
-                                    5 Strike
-                            </ListItem>
-                            <ListItem className={classes.startingCardItem}>
-                                    4 Defend
-                            </ListItem>
-                            <ListItem className={classes.startingCardItem}>
-                                    1 Bash
-                            </ListItem>
+                            {props.character.startingCards.map((item, index) => {
+                                return (
+                                    <ListItem className={classes.startingCardItem} key={index}>
+                                        {item}
+                                    </ListItem>
+                                )
+                            })}
                         </List>
                     </Grid>
                     <Grid item xs={12}>
@@ -121,5 +118,10 @@ const Content = () => {
     )
 }
 
+const mapStateToProps = state => {
+    return {
+        character: state.character.currentCharacter
+    }
+}
 
-export default Content
+export default connect(mapStateToProps, {})(Content)

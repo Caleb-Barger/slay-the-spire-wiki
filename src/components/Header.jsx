@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import {connect} from 'react-redux'
+import {setCharacter} from '../store/actions'
 import {
     AppBar,
     Toolbar,
@@ -18,7 +20,7 @@ const useStyles = makeStyles({
     }
 })
 
-const Header = () => {
+const Header = props => {
 
     const [anchorEl, setAnchorEl] = useState(null);
     
@@ -28,7 +30,10 @@ const Header = () => {
     
     const handleClose = e => {
         setAnchorEl(null);
-        console.log(e.currentTarget.textContent)
+        // console.log(e.currentTarget.textContent)
+        if (e.currentTarget.textContent !== "") {
+            props.setCharacter(e.currentTarget.textContent)
+        }
     };
 
 
@@ -69,4 +74,4 @@ const Header = () => {
 }
 
 
-export default Header
+export default connect(null, {setCharacter})(Header)

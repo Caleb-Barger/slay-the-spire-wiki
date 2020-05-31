@@ -1,15 +1,34 @@
 import {SET_CHARACTER} from '../actions'
+import characterInfo from '../../info/characterInfo.json'
+
+const IRONCLAD = "Ironclad"
+const SILENT = "Silent"
+const DEFECT = "Defect"
+const WATCHER = "Watcher"
+
+const {Ironclad, Defect} = characterInfo
 
 const initalState = {
-    currentCharacter: null
+    currentCharacter: Ironclad
 }
 
-const currentCharacterReducer = (state=initalState, action) => {
+const setCharacter = character => {
+    switch(character) {
+        case IRONCLAD:
+            return Ironclad
+        case DEFECT:
+            return Defect
+        default: 
+            return Ironclad
+    }
+}
+
+export const currentCharacterReducer = (state=initalState, action) => {
     switch(action.type) {
         case SET_CHARACTER:
             return {
                 ...state,
-                currentCharacter: action.payload
+                currentCharacter: setCharacter(action.payload)
             }
         default: 
             return {
@@ -18,4 +37,3 @@ const currentCharacterReducer = (state=initalState, action) => {
     }
 }
 
-export default currentCharacterReducer
