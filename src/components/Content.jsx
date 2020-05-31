@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, makeStyles, Typography, Divider, List, ListItem, ListItemText } from '@material-ui/core'
-
+import DenseTable from './Dense'
+ 
 const useStyles = makeStyles({
     content: {
         background: "rgba(57, 57, 57, 0.85)",
@@ -109,6 +110,11 @@ const Content = () => {
                         </Typography>
                         <Divider variant="middle" className={classes.divider}/>
                     </Grid>
+                    <Grid item xs={1} />
+                    <Grid container item justify="flex-start" xs={10}>
+                        <DenseTable />
+                    </Grid>
+                    <Grid item xs={1} />
             </Grid>
         <Grid item xs={0} md={2} />
         </>
