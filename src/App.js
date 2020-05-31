@@ -7,6 +7,8 @@ import Content from './components/Content'
 const useStyles =  makeStyles({
   coolImage: {
     backgroundImage: "url(https://i.redd.it/ah6w6unypqd41.jpg)",
+    // backgroundPosition: ""
+    backgroundSize: "cover"
   }
 })
 

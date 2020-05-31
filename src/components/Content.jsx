@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, makeStyles, Typography, Divider, List, ListItem, ListItemText } from '@material-ui/core'
+import { Grid, makeStyles, Typography, Divider, List, ListItem } from '@material-ui/core'
 import DenseTable from './Dense'
  
 const useStyles = makeStyles({
@@ -35,7 +35,7 @@ const useStyles = makeStyles({
         marginTop: "20px"
     },
     startingDeckInfoHeader: {
-        marginTop: "10px",
+        // marginTop: "10px",
         marginLeft: "40px",
         color: "white",
         marginTop: "32px",
@@ -59,7 +59,7 @@ const Content = () => {
 
     return (
         <>
-        <Grid item xs={0} md={2} />
+        <Grid item xs={false} md={2} />
             <Grid item container xs={12} md={8} className={classes.content}>
                     <Grid item xs={12}>
                         <Typography variant="h4" className={classes.nameOfClassHeader}>
@@ -116,7 +116,7 @@ const Content = () => {
                     </Grid>
                     <Grid item xs={1} />
             </Grid>
-        <Grid item xs={0} md={2} />
+        <Grid item xs={false} md={2} />
         </>
     )
 }
