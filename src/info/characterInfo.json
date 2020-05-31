@@ -16,6 +16,23 @@
             "unlock5" : "Blue, Candle, Dead Branch, Singing Bowl"
         }
     },
+    "Silent" : {
+        "name" : "Silent",
+        "imageSrc": "https://vignette.wikia.nocookie.net/slay-the-spire/images/a/ac/Silent.png/revision/latest/",
+        "desc1" : "\"A deadly huntress from the foglands. Eradicates foes with daggers and poisons\"",
+        "desc2" : "The Silent is one of four playable characters in Slay the Spire. She is a huntress themed on a rogue fantasy build. This cunning character weakens her foes with numerous cuts and poison, while using cheap tricks and agility to avoid their attacks. With many powerful cards that draw and discard, the Silent ensures that she will always be one step ahead of her enemy. She starts with a relatively low 70 hp.",
+        "desc3": "The Silent's starting Relic is Ring of the Snake, which draws 2 additional cards when starting combat. ",
+        "startingCards": [
+            "5 Strike", "5 Defend", "1 Survivor", "1 Neutralize"
+        ],
+        "unlockRewards": {
+            "unlock1" : "Heavy Blade, Spot Weakness, Limit Break",
+            "unlock2" : "Omamori, Prayer Wheel, Shovel",
+            "unlock3" : "Wild Strike, Evolve, Immolate",
+            "unlock4" : "Havic, Sentinel, Exhume",
+            "unlock5" : "Blue, Candle, Dead Branch, Singing Bowl"
+        }
+    },
     "Defect" : {
         "name" : "Defect",
         "imageSrc": "https://vignette.wikia.nocookie.net/slay-the-spire/images/2/27/Defect.png/revision/latest/",

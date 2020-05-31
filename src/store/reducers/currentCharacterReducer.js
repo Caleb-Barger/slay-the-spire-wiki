@@ -6,7 +6,7 @@ const SILENT = "Silent"
 const DEFECT = "Defect"
 const WATCHER = "Watcher"
 
-const {Ironclad, Defect} = characterInfo
+const {Ironclad, Silent, Defect} = characterInfo
 
 const initalState = {
     currentCharacter: Ironclad
@@ -16,6 +16,8 @@ const setCharacter = character => {
     switch(character) {
         case IRONCLAD:
             return Ironclad
+        case SILENT:
+            return Silent
         case DEFECT:
             return Defect
         default: 
