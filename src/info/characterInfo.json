@@ -1,0 +1,36 @@
+{
+    "Ironclad" : {
+        "name" : "Ironclad",
+        "imageSrc": "https://vignette.wikia.nocookie.net/slay-the-spire/images/7/70/Ironclad.png/revision/latest/",
+        "desc1" : "\"The remaining soldier of the Ironclads. Sold his soul to harness demonic energies.\"",
+        "desc2" : "The Ironclad is one of four playable characters in Slay the Spire. He wields an arsenal of powerful strikes, boasts formidable defensive options, and can draw fiendish power from his demonic benefactors. He starts with 80 hp, highest of the playable characters.",
+        "desc3": "The Ironclad's starting Relic is Burning Blood, which heals 6 HP after combat.",
+        "startingCards": [
+            "5 Strike", "4 Defend", "1 Bash"
+        ],
+        "unlockRewards": {
+            "unlock1" : "Heavy Blade, Spot Weakness, Limit Break",
+            "unlock2" : "Omamori, Prayer Wheel, Shovel",
+            "unlock3" : "Wild Strike, Evolve, Immolate",
+            "unlock4" : "Havic, Sentinel, Exhume",
+            "unlock5" : "Blue, Candle, Dead Branch, Singing Bowl"
+        }
+    },
+    "Defect" : {
+        "name" : "Defect",
+        "imageSrc": "https://vignette.wikia.nocookie.net/slay-the-spire/images/2/27/Defect.png/revision/latest/",
+        "desc1" : "\"Combat automaton which became self-aware. Ancient technology allows manipulation of Orbs.\"",
+        "desc2" : "The Defect is one of four playable characters in Slay the Spire. Once was among the like of Orb Walkers and Bronze Automaton as one of many ancient automatons, it has since gained sentience and seeks its way out of the Spire. It attacks foes with a high-tech arsenal, array of Powers, and elemental evocations. The Defect has a unique mechanic, the Orbs. Using cards and Relics, The Defect Channels these elemental spheres into a set of Orb slots, activating their passive effects each turn or Evoking them for a one-time burst. The Defect starts with three Orb slots, though cards and relics can add or consume them. It starts with 75 hp. ",
+        "desc3": "The Defect's starting Relic is Cracked Core, which Channels 1 Lightning at the start of each combat. ",
+        "startingCards": [
+            "4 Strike", "4 Defend", "1 Zap", "1 Dualcast"
+        ],
+        "unlockRewards": {
+            "unlock1" : "Heavy Blade, Spot Weakness, Limit Break",
+            "unlock2" : "Omamori, Prayer Wheel, Shovel",
+            "unlock3" : "Wild Strike, Evolve, Immolate",
+            "unlock4" : "Havic, Sentinel, Exhume",
+            "unlock5" : "Blue, Candle, Dead Branch, Singing Bowl"
+        }
+    }
+}
