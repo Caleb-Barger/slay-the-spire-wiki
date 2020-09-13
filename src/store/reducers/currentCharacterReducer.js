@@ -1,12 +1,13 @@
 import {SET_CHARACTER} from '../actions'
 import characterInfo from '../../info/characterInfo.json'
 
+// Constants
 const IRONCLAD = "Ironclad"
 const SILENT = "Silent"
 const DEFECT = "Defect"
 const WATCHER = "Watcher"
 
-const {Ironclad, Silent, Defect} = characterInfo
+const {Ironclad, Silent, Defect} = characterInfo 
 
 const initalState = {
     currentCharacter: Ironclad
