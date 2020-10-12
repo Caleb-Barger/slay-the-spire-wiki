@@ -15,8 +15,8 @@ npm start
 
 ## Screenshots
 
-![Capture 1](screenshots\c1.PNG)
-![Capture 2](screenshots\c2.PNG)
+![Capture 1](screenshots/c1.PNG)
+![Capture 2](screenshots/c2.PNG)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
